@@ -2,11 +2,10 @@ from langchain.prompts import load_prompt
 from langchain.chat_models.gigachat import GigaChat
 import arxiv
 import config
-import pandas as pd
 
-credentials = 'YmZlNGMwYWQtM2E0ZS00NzQ3LWIzMzQtZWYxN2NjNTYxODEyOmIyMjkxZTI2LTg4NjktNDc1Yy05NjE5LTg2NzUxNzc3MWZmYg=='
+credentials = 'ZmI3NGRjMDYtNTFjMC00NjdhLTljODgtNTBhOWVjMjk4M2VhOmU2NWY4YjQ2LWEwMGUtNDJjMy1iYmM5LTM0NTJkNGU0OTY3NA=='
 
-chat = GigaChat(credentials=credentials,scope='GIGACHAT_API_CORP', verify_ssl_certs=False)
+chat = GigaChat(model="GigaChat-Pro", credentials=credentials,scope='GIGACHAT_API_CORP', verify_ssl_certs=False)
 
 def create_hypothesis():
     prompt = load_prompt("scientist_hypothesis.yaml")

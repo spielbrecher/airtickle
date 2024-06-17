@@ -1,6 +1,5 @@
 import telebot
 import config
-from telebot import types
 import ai
 
 bot = telebot.TeleBot(config.BOT_TOKEN)
